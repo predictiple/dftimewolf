@@ -44,7 +44,7 @@ from dftimewolf.lib.state import DFTimewolfState
 class DFTimewolfTool(object):
   """DFTimewolf tool."""
 
-  _DEFAULT_DATA_FILES_PATH = os.path.join('/', 'usr', 'share', 'dftimewolf')
+  _DEFAULT_DATA_FILES_PATH = os.path.join('/', 'opt', 'dftimewolf', 'share', 'dftimewolf')
 
   def __init__(self):
     """Initializes a DFTimewolf tool."""
@@ -137,7 +137,7 @@ class DFTimewolfTool(object):
     self._LoadConfigurationFromFile(configuration_file_path)
 
     configuration_file_path = os.path.join(
-        '/', 'usr', 'share', 'dftimewolf', 'dftimewolf.conf')
+        '/', 'opt', 'dftimewolf', 'share', 'dftimewolf', 'dftimewolf.conf')
     self._LoadConfigurationFromFile(configuration_file_path)
 
   def ParseArguments(self, arguments):
@@ -202,7 +202,7 @@ def SignalHandler(*unused_argvs):
   sys.exit(0)
 
 
-def Main():
+def main():
   """Main function for DFTimewolf.
 
   Returns:
